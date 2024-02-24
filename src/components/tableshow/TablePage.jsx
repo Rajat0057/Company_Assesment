@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "../TablePage.css"
 import { IconAt, IconPhoneCall, IconWorld, IconUserPlus, IconTrash, IconStar,IconUserMinus } from '@tabler/icons-react';
 import axios from 'axios';
+import Tooltip from '@mui/material/Tooltip';
 
 
 function TablePage() {
@@ -62,10 +63,26 @@ function TablePage() {
                         <div class="content">
 
                             <h1 className='first_name'>
-                                <span className='cl_he_name' style={{ backgroundColor: index.cardColor }}>{initials}</span>
+                                <span className='cl_he_name' style={{ backgroundColor: index.cardColor }}>
+                                
+                                <Tooltip
+                                title={<div style={{ backgroundColor: 'black', color: 'white', padding: '5px' }}>{index.name}</div>}
+                                placement="top"
+                                
+                            >
+                                {initials}
+                            </Tooltip>
+                               </span>
                             </h1>
 
-                            <h4 style={{ marginTop: "45px", color: 'black' }}> {index.name}
+                            <h4 style={{ marginTop: "45px", color: 'black' }}> 
+                            
+                            
+                            
+                            {index.name}
+
+
+                            
                                 <span>  {followStates[index.id] ? <IconStar /> : ''}</span>
                             </h4>
                             <div className='info-container'>
