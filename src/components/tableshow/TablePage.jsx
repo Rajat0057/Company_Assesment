@@ -86,7 +86,7 @@ function TablePage() {
                                 <span>  {followStates[index.id] ? <IconStar /> : ''}</span>
                             </h4>
                             <div className='info-container'>
-                                <p><span className="icon-span"><IconAt /></span><span >{index.email}</span></p>
+                                <p className=''><span className="icon-span"><IconAt /></span><span >{index.email}</span></p>
                                 <p><span className="icon-span"><IconPhoneCall /></span><span >{index.phone}</span></p>
                                 <p><span className="icon-span"><IconWorld /></span><span >{index.website}</span></p>
                             </div>
